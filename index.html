@@ -70,10 +70,11 @@
     days_in_this_month = new Date( now.getFullYear(), now.getMonth()+1, 0).getDate(); 
     // days = days_in_this_month- now.getDate();
     hours = 23 - 7 - now.getHours();
-    if (hours <0) {
-        hours=0
-    }
     minutes = 59 - now.getMinutes();
+    if (hours <0) {
+        hours=0 ;
+        minutes = 0;
+        }
     // left_days.innerHTML = days + " days "
     left_hours.innerHTML = hours + "<br> <span class=\"small\"> hours</span>";
     left_minutes.innerHTML = minutes + "<br> <span class=\"small\">mins</span>";
